@@ -1,0 +1,324 @@
+.container {
+    border-radius: 2px;
+    background-color: #edf0f5;
+    box-shadow: 0 0 3px #2a323d;
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2 {
+    border-radius: 2px;
+    box-shadow: 0 0 3px #2a323d;
+    background-color: #ffffff;
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #2a323d;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.message2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #2a323d;
+    text-align: center;
+    margin: 2%;
+}
+
+.c1 {
+   /* border-radius: 10px;
+    background-color: #2a323d;
+    color: #eaf1f1;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 350px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: 5px;*/
+    
+    /* Atributos mejorados para centralizaciones de contenido */
+    border-radius: 10px;
+    background-color: #2a323d;
+    color: #eaf1f1;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 350px;
+    height: 40px;
+    text-align: center;          /* Centra el texto horizontalmente dentro del div */
+    display: flex;               /* Usa flexbox para centrar el contenido verticalmente */
+    justify-content: center;     /* Centra horizontalmente los elementos flexibles */
+    align-items: center;         /* Centra verticalmente los elementos flexibles */
+    margin: 5px;
+}
+
+.c2 {
+    border-radius: 10px;
+    border: 1px solid #2a323d;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 350px;
+    height: 40px;
+    text-align: center;          /* Centra el texto horizontalmente dentro del div */
+    display: flex;               /* Usa flexbox para centrar el contenido verticalmente */
+    justify-content: center;     /* Centra horizontalmente los elementos flexibles */
+    align-items: center;         /* Centra verticalmente los elementos flexibles */
+    margin: 5px;
+}
+
+.c3 {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 320px;
+    height: 40px;
+}
+
+.message3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #2a323d;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.porcentage {
+    /*font-family: 'Courier New', Courier, monospace;
+    border-radius: 10%;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #eaf1f1;
+    background-color: #2a323d;
+    text-align: center;
+    align-content: center;
+    width: 60px;
+    height: 30px;*/
+    
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10%;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #eaf1f1;
+    background-color: #2a323d;
+    text-align: center;
+     align-content: center;
+    padding: 0px; /* Ajusta el espacio interno según sea necesario */
+    min-width: 60px; /* Tamaño mínimo para que el cuadro no sea demasiado pequeño */
+    min-height: 30px; /* Tamaño mínimo para el alto del cuadro */
+    display: inline-block; /* Permite que el cuadro se ajuste al contenido */
+}
+
+.inside1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.m1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #2a323d;
+    text-align: center;
+    margin:  25px;
+}
+
+.c4{
+    border-radius: 1px;
+    border: 1px solid #2a323d;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: 5px;
+}
+
+.c5{
+    border-radius: 10px;
+    border: 1px solid #2a323d;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: 5px;
+}
+
+.c6{
+    border-radius: 10px;
+    border: 1px solid #2a323d;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: 5px;
+}
+
+.c7{
+    border-radius: 10px;
+    background-color: #2a323d;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+}
+
+
+.c8{
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    transition: 0.2s;
+}
+
+.c9{
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    transition: 0.2s;
+}
+
+/* Estilo base para los botones */
+.c8, .c9 {
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 125px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    transition: 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Estilo cuando el cursor pasa sobre el botón */
+.c8:hover, .c9:hover {
+    background-color: #2a323d;
+    color: #ffffff;
+}
+
+/* Estilo para el botón cuando está activo (presionado) */
+.c8:active, .c9:active, .c8.selected, .c9.selected {
+    background-color: #2a323d; /* Azul para el estado seleccionado */
+    /*color: #9f9f9f; */
+    color: #ffffff;
+
+}
+
+.c8:hover {
+    background-color: #2a323d;
+    color: #b1a9a9;
+}
+
+.c9:hover {
+    background-color: #2a323d;
+    color: #b1a9a9;
+}
+
+
+
+
+
+.data{
+   /* border-radius: 10px;
+    border: 1px solid #2a323d;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    margin: 5px;*/
+    
+    border-radius: 5px;
+    border: 1px solid #2a323d;
+    background-color: #ffffff;
+    color: #2a323d;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 10px;
+    /* margin: 5px; */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    box-sizing: border-box;
+    max-width: 100%; /* Ajusta el ancho al contenedor padre */
+    max-height: 400px; /* Altura máxima para evitar desbordamiento excesivo */
+    overflow-y: auto; /* Barra de desplazamiento si es necesario */
+   
+
+}
+

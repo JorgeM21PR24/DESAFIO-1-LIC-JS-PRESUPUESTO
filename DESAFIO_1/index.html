@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Presupuesto</title>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title id="app-title">Presupuesto</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="message" > Presupuesto de
+        <p id="elemento-fecha"></p> <p class="message2" id="elemento-saldoTotal"></p>
+         </div>
+        <div class="c1">INGRESOS: <p id="elemento-ingresoTotal"></p> </div> 
+        <div class="c2">EGRESOS: <p id="elemento-egresoTotal"></p> </div>
+        <div class="c3">
+            <div class="message3"> Porcentaje de gastos: </div>
+            <div class="porcentage" id="porcentaje-gastos"></div>
+        </div>
+    </div>
+    <div class="container2">
+        <form class="inside1" id="transaction-form">
+            <div class="m1">Transacción</div>
+            <!-- El menú desplegable (Dropdonw) -->
+            <select class="c4" id="transaction-type">
+                <option value="ingreso">Ingreso</option>
+                <option value="egreso">Egreso</option>
+            </select>
+            <input class="c5" type="text" id="description" placeholder="Descripción" />
+            <input class="c6" type="number" id="amount" placeholder="Monto" step="0.01" />
+            <button class="c7" type="submit">Agregar</button>
+        </form>
+        <div class="inside2">
+            <div class="buttoncontainer">
+                <button class="c8" id="show-incomes">Ingresos</button>
+                <button class="c9" id="show-expenses">Egresos</button>
+            </div>
+            <div class="data" id="data-list">  </div>
+        </div>
+    </div>
+    <script src="backend.js"></script>
+</body>
+
+</html>
