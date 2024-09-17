@@ -5,11 +5,11 @@
 const saldoInicial = 0;
 // Array para almacenar las transacciones de Testeo
 let transacciones = [
-    { tipo: 'ingreso', descripcion: 'Salario', monto: 0 },
-    { tipo: 'egreso', descripcion: 'Renta', monto: 0 },
-    { tipo: 'ingreso', descripcion: 'Freelance', monto: 0 },
-    { tipo: 'egreso', descripcion: 'Comida', monto: 0 },
-    { tipo: 'egreso', descripcion: 'Transporte', monto: 0 }
+    /*{ tipo: 'ingreso', descripcion: 'Salario 1', monto: 0 },
+    { tipo: 'egreso', descripcion: 'descuento 1', monto: 0 },
+    { tipo: 'ingreso', descripcion: 'Salario 2', monto: 0 },
+    { tipo: 'egreso', descripcion: 'descuenta 2', monto: 0 } */
+    { tipo: '', descripcion: 'Estado Inicial', monto: 0}
 ];
 
 // FUNCIONES
@@ -127,7 +127,7 @@ document.getElementById('transaction-form').addEventListener('submit', (event) =
     // Validar si descripcion no este vacio y que el monto sea mayor a cero
     if (descripcion && monto > 0) {
         //Añade un nuevo objeto al array a la lista de transacciones
-        transacciones.push({ tipo, descripcion, monto });
+       transacciones.push({ tipo, descripcion, monto });
         //Restablece el formulario, reinicia los valores de los campos de formulario
         document.getElementById('transaction-form').reset();
         actualizarDatos(); 
@@ -138,10 +138,15 @@ document.getElementById('transaction-form').addEventListener('submit', (event) =
 document.getElementById('show-incomes').addEventListener('click', () => {
     const dataList = document.getElementById('data-list');
     dataList.innerHTML = ''; // Limpiar la lista
-
+ // Totaliza los montos para ser ocupados en la funcion
+    const { totalIngresos, totalEgresos, saldoTotal, porcentajeGastos } = calcularDatos(); 
+    
     transacciones.filter(t => t.tipo === 'ingreso').forEach((transaccion, index) => {
         const item = document.createElement('div');
-        item.textContent = `${transaccion.descripcion} - $ ${transaccion.monto.toFixed(2)} `;
+        // Porcentaje por transaccion de Egresos
+         const porcentaje = totalIngresos > 0 ? (transaccion.monto.toFixed(2) / totalIngresos) * 100 : 0;
+        //item.textContent = `${transaccion.descripcion} - $ ${transaccion.monto.toFixed(2)} (${porcentaje}%)`;
+        item.textContent = `${transaccion.descripcion} - $ ${transaccion.monto.toFixed(2)} ---  ${porcentaje.toFixed(2)}% `;
         dataList.appendChild(item);
     });
 });
@@ -152,12 +157,17 @@ document.getElementById('show-expenses').addEventListener('click', () => {
     // Lista o contenedor que almacenara las transacciones filtradas
     const dataList = document.getElementById('data-list');
     dataList.innerHTML = ''; // Limpiar la lista
+    // Totaliza los montos para ser ocupados en la funcion
+    const { totalIngresos, totalEgresos, saldoTotal, porcentajeGastos } = calcularDatos();
+    
    /* Filtra el array transacciones para obtener solo aquellas transacciones cuyo tipo es 'ingreso' */
     transacciones.filter(t => t.tipo === 'egreso').forEach((transaccion, index) => {
         // Crea un nuevo elemento div
         const item = document.createElement('div');
+        // Porcentaje por transaccion de Egresos
+         const porcentaje = totalEgresos > 0 ? (transaccion.monto.toFixed(2) / totalEgresos) * 100 : 0;
         // Establece el texto del nuevo elemento <div>, el monto aproximacion con dos digitos
-        item.textContent = `${transaccion.descripcion} - $ ${transaccion.monto.toFixed(2)} `;
+        item.textContent = `${transaccion.descripcion} - $ ${transaccion.monto.toFixed(2)} ---  ${porcentaje.toFixed(2)}% `;
         // Agrega a la lista el nuevo div, con la informacion
         dataList.appendChild(item);
     });
